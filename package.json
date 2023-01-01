@@ -1,0 +1,43 @@
+{
+  "name": "libraryer",
+  "version": "1.1.0",
+  "description": "A boilerplate for creating NPM/JavaScript packages. Complete with a bundler and recommended packaging patterns.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "scripts": {
+    "// Building": "___________________________________",
+    "build": "rollup -c",
+    "dev": "npm run build -- -w",
+    "// Testing": "___________________________________",
+    "test": "node main.test.js",
+    "test:dev": "nodemon main.test.js",
+    "// Publishing": "___________________________________",
+    "publish:major": "npm run build && npm version major && npm publish",
+    "publish:minor": "npm run build && npm version minor && npm publish",
+    "publish:patch": "npm run build && npm version patch && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qudo-lucas/libraryer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qudo-lucas/libraryer/issues"
+  },
+  "homepage": "https://github.com/qudo-lucas/libraryer#readme",
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/runtime": "^7.15.4",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^21.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@tivac/eslint-config": "^2.4.0",
+    "eslint": "^8.0.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-svelte3": "^3.2.1",
+    "rollup-plugin-terser": "^7.0.2"
+  }
+}
